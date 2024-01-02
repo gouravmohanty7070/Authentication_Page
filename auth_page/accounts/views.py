@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import login, authenticate, logout
 from .forms import SignUpForm
 from django.contrib.auth.forms import AuthenticationForm
+from django.contrib import messages
 
 # User registration view
 def signup_view(request):
@@ -37,4 +38,5 @@ def dashboard_view(request):
 # User logout view
 def logout_view(request):
     logout(request)
+    messages.info(request, "You've logged out successfully.")
     return redirect('login')

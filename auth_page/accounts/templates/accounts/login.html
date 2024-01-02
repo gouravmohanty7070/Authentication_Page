@@ -6,6 +6,14 @@
 <h2>Login</h2>
 <form method="post">
     {% csrf_token %}
+    {% if form.errors %}
+        <div class="alert alert-danger" role="alert">
+            Please correct the error below.
+        </div>
+        {{ form.non_field_errors }}
+        {{ form.username.errors }}
+        {{ form.password.errors }}
+    {% endif %}
     {{ form.as_p }}
     <button type="submit" class="btn btn-primary">Login</button>
 </form>

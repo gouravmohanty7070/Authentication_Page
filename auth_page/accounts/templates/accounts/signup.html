@@ -6,6 +6,16 @@
 <h2>Sign Up</h2>
 <form method="post">
     {% csrf_token %}
+    {% if form.errors %}
+        <div class="alert alert-danger" role="alert">
+            Please correct the error below.
+        </div>
+        {{ form.non_field_errors }}
+        {{ form.username.errors }}
+        {{ form.email.errors }}
+        {{ form.password1.errors }}
+        {{ form.password2.errors }}
+    {% endif %}
     {{ form.as_p }}
     <button type="submit" class="btn btn-primary">Sign Up</button>
 </form>

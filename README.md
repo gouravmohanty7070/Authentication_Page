@@ -126,10 +126,13 @@ Click the logout link in the dashboard.
 </ol>
 
 ### Author
+---
 
 Made with ❤️ by Gourav Mohanty
 
 ### Demo Video
 ---
+
+[Demo](https://drive.google.com/file/d/1VDvmESXUGWhB5ACJ4juGSb8dyh6HwYvm/view?usp=drive_link)
 
 
